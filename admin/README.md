@@ -1,0 +1,2 @@
+This software was designed and developed by wisdom ekpot.
+To run this program clone it from my github repo.After cloning it to your local machine,move into that folding using your prefered command prompt and run `npm install`.this will generate a node module folder where all ypur dependencies will be stored.after doing that you run `npm run serve` to run your program.
