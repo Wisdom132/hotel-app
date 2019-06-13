@@ -39,7 +39,8 @@
           <div class="col-md-6" id="header">
             <h2>Welcome To Sparta Hotels</h2>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis necessitatibus laborum adipisci!</p>
-            <router-link to="/userbook" class="btn btn-primary">Book A Room</router-link>
+            <router-link to="/userbook" class="btn btn-primary btn-sm">Book A Room</router-link>
+             
           </div>
         </div>
       </div>
@@ -57,7 +58,7 @@
           </div>
           <div class="col-md-6 mt-5">
             <p class="abt text-justify">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. In cumque voluptas tenetur necessitatibus obcaecati saepe aspernatur animi possimus tempora aperiam, distinctio fugiat corrupti alias eveniet odit delectus nam impedit vitae? Non perferendis natus cupiditate eaque commodi totam?
+              We provide Cutting-edge luxury accommodations to assure you a have a magnificent stay, A five star Inn located in the vicinity of Afe Babalola University wants to make your experience feel like you're home.
               Alias delectus aliquid tenetur cum accusamus tempore id. Odit placeat voluptatum consequuntur explicabo optio unde facere at, obcaecati eius tenetur aliquid nemo labore!
             </p>
           </div>
@@ -76,11 +77,14 @@
             <div class="card shadow-lg" style="width: 18rem;">
               <img src="../assets/images/our-1.jpg" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title mb-4" style="font-weight:700">Couple</h5>
                 <p
                   class="card-text"
                 >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                
+                <a href="#" class="btn btn-primary">Reserve</a>
+        
+                <p class="float-right">#15,000 per night</p>
               </div>
             </div>
           </div>
@@ -88,11 +92,12 @@
             <div class="card shadow-lg" style="width: 18rem;">
               <img src="../assets/images/our-2.jpg" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title mb-4" style="font-weight:700">Family</h5>
                 <p
                   class="card-text"
                 >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="#" class="btn btn-primary">Reserve</a>
+                <p class="float-right">#25,000 per night</p>
               </div>
             </div>
           </div>
@@ -100,11 +105,12 @@
             <div class="card shadow-lg" style="width: 18rem;">
               <img src="../assets/images/our-3.jpg" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title mb-4" style="font-weight:700">Suite</h5>
                 <p
                   class="card-text"
                 >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="#" class="btn btn-primary">Reserve</a>
+                <p class="float-right">#10,000 per night</p>
               </div>
             </div>
           </div>
@@ -114,11 +120,12 @@
             <div class="card shadow-lg" style="width: 18rem;">
               <img src="../assets/images/our-4.jpg" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title mb-4" style="font-weight:700">Vip</h5>
                 <p
                   class="card-text"
                 >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="#" class="btn btn-primary">Reserve</a>
+                <p class="float-right">#65,000 per night</p>
               </div>
             </div>
           </div>
@@ -126,11 +133,13 @@
             <div class="card shadow-lg" style="width: 18rem;">
               <img src="../assets/images/our-5.jpg" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title mb-4" style="font-weight:700">VVip</h5>
+                
                 <p
                   class="card-text"
                 >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="#" class="btn btn-primary">Reserve</a>
+                <p class="float-right">#90,000 per night</p>
               </div>
             </div>
           </div>
@@ -138,11 +147,12 @@
             <div class="card shadow-lg" style="width: 18rem;">
               <img src="../assets/images/our-6.jpg" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title mb-4">Card title</h5>
                 <p
                   class="card-text"
                 >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="#" class="btn btn-primary">Reserve</a>
+                <p class="float-right">#15,000 per night</p>
               </div>
             </div>
           </div>
@@ -262,18 +272,20 @@
 </template>
 
 <script>
+
 export default {
   data() {
-    return {
-      // text: "kkkkkk"
-    };
-  }
-};
+    
+  },
+    methods: {
+      
+}
+}
 </script>
 
 <style scoped>
 .btn {
-  margin: 0px;
+  padding: 5px;
 }
 #intro_header {
   background:linear-gradient(rgba(0, 0, 34, 0.55), rgba(0, 0, 34, 0.55)), url("../assets/images/header.jpg");

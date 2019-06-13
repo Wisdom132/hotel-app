@@ -38,9 +38,11 @@ export default {
         let end = Date.parse(this.checkout);
         let checkin = Date.parse(this.checkin);
 
+        
+
             let now = new Date().getTime();
 
-        if(now>=checkin){
+        if(now >=checkin){
             let handler = setInterval(()=>{
             let start = new Date().getTime();
             this.timeLeft = (end - start)/1000;
@@ -51,16 +53,15 @@ export default {
                 days: Math.trunc(this.timeLeft/86400),
 
             }
-
-           //console.log(this.timer)
             if(this.timeLeft<1){
                 clearInterval(handler);
-
             }
+       console.table(this.timer.days)
+
         },1000)
+        
 
         }
-       // console.log(start>end)
 
         
         //this.now = Math.trunc(new Date().getTime() / 1000);

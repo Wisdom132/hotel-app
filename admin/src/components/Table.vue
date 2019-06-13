@@ -16,7 +16,7 @@
             </tr>
           </thead>
           <tbody> 
-            <tr v-for="customer in filterBy(customers , filterInput)" :key="customer._id">
+            <tr v-for="customer in customers" :key="customer._id">
               <th scope="row">1</th>
               <td>{{customer.first_name}}</td>
               <td>{{customer.last_name}}</td>

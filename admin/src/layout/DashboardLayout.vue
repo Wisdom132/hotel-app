@@ -15,7 +15,7 @@
       </sidebar-link>
       <sidebar-link to="/admin/typography">
         <i class="nc-icon nc-paper-2"></i>
-        <p>Typography</p>
+        <p>Our Rooms</p>
       </sidebar-link>
       <sidebar-link to="/admin/timer">
         <i class="nc-icon nc-atom"></i>

@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import App from './App.vue'
 import VueResource from "vue-resource";
 
+
 // LightBootstrap plugin
 import LightBootstrap from './light-bootstrap-main'
 
@@ -15,6 +16,7 @@ import './registerServiceWorker'
 Vue.use(VueRouter)
 Vue.use(LightBootstrap)
 Vue.use(VueResource);
+// Vue.use(paystack)
 
 // configure router
 const router = new VueRouter({
