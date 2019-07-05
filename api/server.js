@@ -21,7 +21,7 @@ app.use(bodyParser.json());
 
 app.use(cors());
 
-let routes = require("./routes/roomListRoutes");
+let routes = require("./routes/roomListRoutes"); 
 routes(app);
 
 app.listen(port);

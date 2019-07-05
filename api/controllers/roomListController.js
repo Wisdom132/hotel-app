@@ -14,7 +14,7 @@ exports.create_a_room = function(req, res) {
   var new_room = new Room(req.body);
   new_room.save(function(err, task) {
     if (err) res.send(err);
-    res.json(task);
+    res.json(task); 
   });
 };
 

@@ -1,8 +1,16 @@
 <template>
   <div>
-    <div class="container">
-      <div class="col-md-8 mt-5">
-        <card>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <card>
           <h4 slot="header" class="card-title">Add A New User</h4>
           <form @submit="addCustomer">
             <div class="row">
@@ -100,12 +108,12 @@
               </div>
               <div class="col-md-6">
                 <label for>Room Type</label>
-                 <select class="form-control" v-model="customer.room_type" v-model.lazy ="selected">
+                 <select class="form-control" @change="roomSelected" v-model="customer.room_type" >
                   <option v-for="option in options" :key="option.value" :value="option.value">
                     {{option.text}}
                     </option>
                 </select>
-                <span>selected:{{selected}}</span>
+                <span class="text-dark">Your Price{{selected}}</span>
                </div>
             </div>
 
@@ -126,28 +134,24 @@
           </form>
         </card>
       </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
     </div>
+  </div>
+</div>
   </div>
 </template>
 <script>
 import paystack from "vue-paystack";
 import Card from "src/components/Cards/Card.vue";
-import count from '@/components/count.vue';
 
-export default {
-  props: {
-       timer: {
-         type:Object
-       }
-  },     mounted() {
-       console.table(this.timer.days)
-  },
+export default {   
   components: {
     paystack,
     Card
   },
   data() {
-
     return {
       // timer:'',
       selected: 0,
@@ -191,6 +195,12 @@ export default {
           console.log(response);
         });
       this.customer = {};
+    },
+    roomSelected() {
+      let checkin = Number(this.customer.checkin.substring(8))
+      let checkout = Number(this.customer.checkout.substring(8));
+      this.selected = Number(this.customer.room_type) * (checkout - checkin)
+      // debugger
     }
   },
   computed: {
@@ -204,6 +214,9 @@ export default {
       return text;
     }
   },
+  mounted() {
+    roomSelected() 
+}
  
 };
 </script>

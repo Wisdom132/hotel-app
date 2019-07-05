@@ -56,7 +56,7 @@ export default {
             if(this.timeLeft<1){
                 clearInterval(handler);
             }
-       console.table(this.timer.days)
+       console.log(this.timer.days)
 
         },1000)
         
