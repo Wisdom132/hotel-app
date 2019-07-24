@@ -10,9 +10,9 @@
         </h4>
       </a>
     </div>
-    <p class="description text-center"> "Lamborghini Mercy <br>
-      Your chick she so thirsty <br>
-      I'm in that two seat Lambo"
+    <p class="description text-center"> "Yea.. You Can Hire me  <br>
+      I will show you the defination of user interface <br>
+  you will live it
     </p>
     <div slot="footer" class="text-center d-flex justify-content-center">
       <button href="#" class="btn btn-simple"><i class="fa fa-facebook-square"></i></button>

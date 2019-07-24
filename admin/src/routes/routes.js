@@ -11,8 +11,7 @@ import timer from 'src/pages/timer.vue'
 import Maps from 'src/pages/Maps.vue'
 import Notifications from 'src/pages/Notifications.vue'
 import home from 'src/pages/home.vue'
-import userbook from 'src/pages/userbook'
-
+import login from '@/components/login.vue'
 const routes = [
   {
     path: "/",
@@ -20,14 +19,14 @@ const routes = [
     component: home
   },
   {
-    path: "/userbook",
-    name: "userbook",
-    component: userbook
+    path: "/login",
+    name: "login",
+    component: login
   },
   {
     path: "/admin",
     component: DashboardLayout,
-    redirect: "/admin/overview",
+    redirect: "/login",
     children: [
       {
         path: "overview",

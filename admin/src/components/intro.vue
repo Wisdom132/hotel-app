@@ -5,8 +5,7 @@
         <div class="container">
           <a class="navbar-brand" href="#">Navbar</a>
           <button
-            class="navbar-toggler"
-            type="button"
+            class="navbar-toggler btn btn-transparent"
             data-toggle="collapse"
             data-target="#navbarNav"
             aria-controls="navbarNav"
@@ -40,10 +39,10 @@
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis necessitatibus laborum adipisci!</p>
             <button
               type="button"
-              class="btn btn-primary"
+              class="btn btn-primary bg-primary text-light"
               data-toggle="modal"
               data-target="#exampleModal"
-            >book a room</button>
+            >Book a room</button>
             <book-room />
           </div>
         </div>
@@ -86,7 +85,12 @@
                   class="card-text"
                 >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 
-                <a href="#" class="btn btn-primary">Reserve</a>
+                <a
+                  href="#"
+                  class="btn btn-primary"
+                  data-toggle="modal"
+                  data-target="#exampleModal"
+                >Reserve</a>
 
                 <p class="float-right">#15,000 per night</p>
               </div>
@@ -100,7 +104,12 @@
                 <p
                   class="card-text"
                 >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Reserve</a>
+                <a
+                  href="#"
+                  class="btn btn-primary"
+                  data-toggle="modal"
+                  data-target="#exampleModal"
+                >Reserve</a>
                 <p class="float-right">#25,000 per night</p>
               </div>
             </div>
@@ -113,7 +122,12 @@
                 <p
                   class="card-text"
                 >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Reserve</a>
+                <a
+                  href="#"
+                  class="btn btn-primary"
+                  data-toggle="modal"
+                  data-target="#exampleModal"
+                >Reserve</a>
                 <p class="float-right">#10,000 per night</p>
               </div>
             </div>
@@ -128,7 +142,12 @@
                 <p
                   class="card-text"
                 >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Reserve</a>
+                <a
+                  href="#"
+                  class="btn btn-primary"
+                  data-toggle="modal"
+                  data-target="#exampleModal"
+                >Reserve</a>
                 <p class="float-right">#65,000 per night</p>
               </div>
             </div>
@@ -142,7 +161,12 @@
                 <p
                   class="card-text"
                 >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Reserve</a>
+                <a
+                  href="#"
+                  class="btn btn-primary"
+                  data-toggle="modal"
+                  data-target="#exampleModal"
+                >Reserve</a>
                 <p class="float-right">#90,000 per night</p>
               </div>
             </div>
@@ -155,7 +179,12 @@
                 <p
                   class="card-text"
                 >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Reserve</a>
+                <a
+                  href="#"
+                  class="btn btn-primary"
+                  data-toggle="modal"
+                  data-target="#exampleModal"
+                >Reserve</a>
                 <p class="float-right">#15,000 per night</p>
               </div>
             </div>

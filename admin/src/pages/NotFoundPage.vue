@@ -14,13 +14,14 @@
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="navigation-example-2">
-          <ul class="nav navbar-nav navbar-right">
+        
+        <nav class="pull-left">
+          <ul>
             <li>
               <router-link :to="{path:'/'}">Home</router-link>
             </li>
           </ul>
-        </div>
+        </nav>
         <!-- /.navbar-collapse -->
       </div>
       <!-- /.container-->
@@ -39,22 +40,7 @@
     </div>
     <footer class="footer-demo">
       <div class="container">
-        <nav class="pull-left">
-          <ul>
-            <li>
-              <router-link :to="{path:'/'}">Home</router-link>
-            </li>
-            <li>
-              <router-link :to="{path:'/register'}">Register</router-link>
-            </li>
-          </ul>
-        </nav>
-        <div class="copyright text-center">
-          &copy; Coded with
-          <i class="fa fa-heart heart"></i> by
-          <a href="https://binarcode.com" target="_blank">BinarCode</a>.
-          Designed by <a href="https://www.creative-tim.com/?ref=pdf-vuejs" target="_blank">Creative Tim</a>.
-        </div>
+        
       </div>
     </footer>
   </div>
@@ -64,3 +50,15 @@
   export default {}
 
 </script>
+<style scoped>
+ * {
+   color:black !important;
+ }
+ ul li{ 
+   list-style-type: none;
+   padding:0px 8px;
+ }
+ ul {
+   display: flex;
+ }
+</style>
