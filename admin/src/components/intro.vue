@@ -70,7 +70,7 @@
     </section>
     <section id="rooms">
       <div class="container">
-        <div class="row">
+        <div class="row mx-auto">
           <div class="col-md-12 text-center mb-5">
             <h3 style="font-weight:500">Our Rooms</h3>
           </div>
@@ -96,7 +96,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 mx-auto">
             <div class="card shadow-lg" style="width: 18rem;">
               <img src="../assets/images/our-2.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
@@ -319,6 +319,9 @@ export default {
 </script>
 
 <style scoped>
+.card {
+  margin:auto !important;
+}
 .btn {
   padding: 5px;
 }

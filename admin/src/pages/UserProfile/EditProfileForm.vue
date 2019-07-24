@@ -42,7 +42,7 @@
                 ></base-input>
               </div>
               <div class="col-md-6">
-                <base-input type="email" label="Email" placeholder="Email" v-model="customer.email"></base-input>
+                <base-input type="email" label="Email" placeholder="Email" v-model="email"></base-input>
               </div>
             </div>
             <div class="row">
@@ -161,7 +161,7 @@ export default {
       ],
       customer: {},
       paystackkey: "pk_test_7d3ce7649cc6f27c84bd7b150110f45ba5023a97", //paystack public key
-      email: "wisdomekpot@gmail.com", // Customer email
+      email: "", // Customer email
       amount: 0 //amount in kobo
     };
   },
@@ -177,7 +177,7 @@ export default {
       let newCustomer = {
         first_name: this.customer.first_name,
         last_name: this.customer.last_name,
-        email: this.customer.email,
+        email: this.email,
         phone: this.customer.phone,
         Address: this.customer.Address,
         checkin: this.customer.checkin,

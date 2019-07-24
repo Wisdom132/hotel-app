@@ -44,7 +44,7 @@
     },
     filterBy(list,value) {
       return list.filter(function(customer) {
-        return customer.last_name.indexOf(value) > -1; 
+        return customer.last_name.indexOf(value) > -1;
       });
     }
   },

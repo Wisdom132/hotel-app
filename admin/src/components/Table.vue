@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-md-12">
         <input type="text" class="form-control col-md-6 ml-3" placeholder="Search a by last name" v-model="filterInput">
-        <table class="table table-striped">
+        <table class="table table-striped table-responsive">
           <thead>
             <tr>
               <th scope="col">#</th>
@@ -16,7 +16,7 @@
             </tr>
           </thead>
           <tbody> 
-            <tr v-for="customer in customers" :key="customer._id">
+            <tr v-for="customer in filterBy(customers , filterInput)" :key="customer._id">
               <th scope="row">1</th>
               <td>{{customer.first_name}}</td>
               <td>{{customer.last_name}}</td>
@@ -54,7 +54,7 @@ export default {
     },
     filterBy(list,value) {
       return list.filter(function(customer) {
-        return customer.last_name.indexOf(value) > -1; 
+        return customer.last_name.indexOf(value) > -1;
       });
     }
   },

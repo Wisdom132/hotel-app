@@ -54,7 +54,7 @@
                       label="Email"
                       placeholder="Email"
                       ref="userEmail"
-                      v-model="customer.email"
+                      v-model="email"
                     ></base-input>
                   </div>
                 </div>
@@ -180,9 +180,10 @@ export default {
         { text: "suite", value: 1000000 },
         { text: "VVip", value: 900000 }
       ],
-      customer: {},
+      customer: {
+      },
       paystackkey: "pk_test_7d3ce7649cc6f27c84bd7b150110f45ba5023a97", //paystack public key
-      email : 'this.$refs.userEmail.value' , // Customer email
+      email: "", // Customer email
       amount: 0 //amount in kobo
     };
   },
@@ -198,7 +199,7 @@ export default {
       let newCustomer = {
         first_name: this.customer.first_name,
         last_name: this.customer.last_name,
-        email: this.customer.email,
+        email: this.email,
         phone: this.customer.phone,
         Address: this.customer.Address,
         checkin: this.customer.checkin,

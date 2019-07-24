@@ -132,12 +132,12 @@
         </div>
 
         <div class="col-md-6">
-          <card>
+          <card style="width:auto !important;">
             <template slot="header">
               <h5 class="title">Tasks</h5>
               <p class="category">Backend development</p>
             </template>
-            <l-table class="table-responsive" />
+            <l-table/>
             <div class="footer">
               <hr>
               <div class="stats">
