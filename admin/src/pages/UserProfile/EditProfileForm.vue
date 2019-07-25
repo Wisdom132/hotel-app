@@ -12,7 +12,7 @@
       <div class="modal-body">
           <card>
           <h4 slot="header" class="card-title">Add A New User</h4>
-          <form @submit="addCustomer">
+          <form @submit.prevent="register">
             <div class="row">
               <div class="col-md-6">
                 <base-input
@@ -155,7 +155,7 @@ export default {
       options: [
         { text: "Family", value:150000 },
         { text: "Couple", value:250000 },
-        { text: "suite", value:250000 },
+        { text: "suite", value:260000 },
         { text: "Vip", value:10000 },
         { text: "VVip", value:650000 }
       ],
@@ -166,14 +166,20 @@ export default {
     };
   },
   methods: {
+     register() {
+      if(close) {
+        return false
+      }else {
+        this.callback()
+      }
+    },
     callback: function(response) {
-      console.log(response);
+      this.addCustomer();
     },
     close: function() {
       console.log("Payment closed");
     },
-    addCustomer(e) {
-      e.preventDefault();
+    addCustomer() {
       let newCustomer = {
         first_name: this.customer.first_name,
         last_name: this.customer.last_name,

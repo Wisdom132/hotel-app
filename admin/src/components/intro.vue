@@ -1,5 +1,7 @@
 <template>
   <div>
+     <book-room />
+            <contact-us />
     <section id="intro_header">
       <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
         <div class="container">
@@ -26,7 +28,7 @@
                 <a class="nav-link" href="#rooms">Our Rooms</a>
               </li>
               <li>
-                <a class="nav-link" href="#">Contact Us</a>
+                <a class="nav-link btn btn-primary" data-toggle="modal" data-target="#exampleModal1">Contact Us</a>
               </li>
             </ul>
           </div>
@@ -43,7 +45,6 @@
               data-toggle="modal"
               data-target="#exampleModal"
             >Book a room</button>
-            <book-room />
           </div>
         </div>
       </div>
@@ -308,19 +309,19 @@
 
 <script>
 import book from "@/components/book.vue";
-// import paystack from "vue-paystack";
-// import Card from "src/components/Cards/Card.vue"
-
+import contact from "@/components/contact/contact";
 export default {
   components: {
-    "book-room": book
+    "book-room": book,
+    "contact-us": contact
   }
 };
 </script>
 
 <style scoped>
 .card {
-  margin:auto !important;
+  margin: auto !important;
+  margin-top: 10px !important;
 }
 .btn {
   padding: 5px;

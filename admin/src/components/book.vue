@@ -19,7 +19,7 @@
           <div class="modal-body">
             <card>
               <h4 slot="header" class="card-title">Register</h4>
-              <form @submit="addCustomer">
+              <form @submit.prevent="register">
                 <div class="row">
                   <div class="col-md-6">
                     <base-input
@@ -187,16 +187,24 @@ export default {
       amount: 0 //amount in kobo
     };
   },
+  
   methods: {
-    callback: function(response) {
-      console.log(response);
+    register() {
+      if(close) {
+        return false
+      }else {
+        this.callback()
+      }
     },
+
     close: function() {
-      console.log("Payment closed");
+      confirm('Are You Sure you want To cancel this booking??')
     },
-    addCustomer(e) {
-      e.preventDefault();
-      let newCustomer = {
+    callback() {
+      this.addCustomer();
+    },
+    addCustomer() {
+        let newCustomer = {
         first_name: this.customer.first_name,
         last_name: this.customer.last_name,
         email: this.email,
@@ -213,8 +221,6 @@ export default {
         .post("http://localhost:3000/rooms", newCustomer)
         .then(response => {
           console.log(response);
-          // debugger
-          //  this.email = this.customer.email;
         });
       this.customer = {};
     },
@@ -223,7 +229,8 @@ export default {
       let checkout = Number(this.customer.checkout.substring(8));
       this.selected = Number(this.customer.room_type) * (checkout - checkin);
       // debugger
-    }
+    },
+   
   },
   computed: {
     reference() {
@@ -238,5 +245,9 @@ export default {
   }
 };
 </script>
-<style>
+<style scoped>
+  .modal.show .modal-dialog {
+  transform: translate(0%, 0%);
+  -webkit-transform: translate(0%, 0%) !important;
+}
 </style>

@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-md-12">
         <input type="text" class="form-control col-md-6 ml-3" placeholder="Search a by last name" v-model="filterInput">
-        <table class="table table-striped table-responsive">
+        <table class="table table-striped table-responsive-sm">
           <thead>
             <tr>
               <th scope="col">#</th>
@@ -63,5 +63,5 @@ export default {
   }
 };
 </script>
-<style>
+<style scoped>
 </style>

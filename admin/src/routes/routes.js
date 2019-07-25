@@ -12,6 +12,9 @@ import Maps from 'src/pages/Maps.vue'
 import Notifications from 'src/pages/Notifications.vue'
 import home from 'src/pages/home.vue'
 import login from '@/components/login.vue'
+import contact from 'src/pages/contact'
+import contactInfo from '@/components/contact/contactInfo'
+
 const routes = [
   {
     path: "/",
@@ -62,7 +65,18 @@ const routes = [
         path: "notifications",
         name: "Notifications",
         component: Notifications
-      }
+      },
+      {
+        path: "contact",
+        name: "contact",
+        component: contact
+      },
+      {
+        path: "contactInfo/:id",
+        name: "contactInfo",
+        component: contactInfo
+      },
+      
     ]
   },
   { path: "*", component: NotFound }
