@@ -4,6 +4,7 @@ const cors = require("cors");
 const port = process.env.PORT || 3000;
 const mongoose = require("mongoose");
 const Room = require("./models/roomListModels");
+const Contact = require("./models/contactModel");
 const bodyParser = require("body-parser");
 const db = mongoose.connection;
 
@@ -22,7 +23,10 @@ app.use(bodyParser.json());
 app.use(cors());
 
 let routes = require("./routes/roomListRoutes"); 
+let contactRoutes = require("./routes/contactRoutes"); 
+
 routes(app);
+contactRoutes(app)
 
 app.listen(port);
 console.log(`this application started on Port: ${port}`);
